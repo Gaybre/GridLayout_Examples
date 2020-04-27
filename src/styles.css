@@ -1,0 +1,63 @@
+body {
+	background-color: #f2f2f2;
+	font-family: arial;
+}
+.container {
+	display: grid;
+	grid-gap: 15px;
+	grid-template-columns: repeat(3, 1fr);
+}
+.card {
+	background-color: white;
+	border: 2px solid lightgreen;
+	padding: 10px;
+	display: grid;
+	grid-template-areas: "badge title"
+						 "description description"
+						 "link link";
+	justify-items: center;
+	align-items: center;
+}
+.logo {
+	grid-area: badge;
+	width: 50px;
+}
+.title {
+	grid-area: title;
+}
+.description {
+	grid-area: description;
+}
+.link {
+	margin-top: 50px;
+	grid-area: link;
+}
+
+
+.footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+.footer1,
+.footer2 {
+    text-align: center;
+    margin-top: 15px;;
+}
+.text--footer {
+    font-size: 12px;
+    text-decoration: none;
+    margin-right: 16px;
+    color: #0431B4;
+}
+.text--footer:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 500px) {
+	.container {
+	display: grid;
+	grid-gap: 15px;
+	grid-template-columns: 1fr;
+	}
+}

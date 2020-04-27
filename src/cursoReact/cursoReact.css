@@ -30,6 +30,7 @@ body {
 	margin: 0;
 	display: flex;
 	align-items: center;
+	padding: 0 25px;
 }
 .form {
 	grid-area: form;
@@ -86,6 +87,7 @@ p {
 }
 .description {
 	grid-area: description;
+	padding: 0 25px;
 }
 
 @media screen and (max-width: 768px) {

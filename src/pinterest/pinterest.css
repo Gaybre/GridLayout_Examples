@@ -1,19 +1,28 @@
 body {
     font-family: arial;
+    margin: 0;
+    padding: 0;
+    padding-top: 70px;
+    padding-bottom: 120px;
 }
 .header {
     display: grid;
     grid-template-columns: 40px 85px 1fr 120px 120px;
     grid-template-rows: 40px;
     grid-gap: 10px;
-    padding: 10px;
     align-items: center;
+    box-sizing: border-box;
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    padding: 10px;
+    top: 0;
 }
 .logo {
     width: 80%;
     justify-self: center;
 }
-.name {
+.nameApp {
     font-size: 18px;
     margin: 0;
     font-weight: 600;
@@ -21,14 +30,20 @@ body {
 .header input {
     border-radius: 5px;
     border: none;
-    background: #f3f3f3;
-    padding-left: 15px;
+    padding-left: 35px;
     height: 40px;
+    width: 90%;
     font-size: 14px;
     font-weight: 600;
+    outline: none;
+    color: #666;
+    background: #f3f3f3;
+    background-image:url('search.png');
+    background-repeat:no-repeat;
+    background-position: left 5px center;
 }
 :placeholder {
-    color: #bcbcbc;
+    color: #666;
 }
 .header button {
     height: 40px;
@@ -36,6 +51,7 @@ body {
     border-radius: 5px;
     border: none;
     cursor: pointer;
+    outline: none;
 }
 .register {
     background: rgb(230, 0, 35);
@@ -73,7 +89,41 @@ body {
     grid-row-end: span 3;
 }
 
+.back {
+    background-color: rgba(0, 0, 0, .4);
+    position: fixed;
+    bottom: 15%;
+    width: 210px;
+    height: 45px;
+    padding: 0 10px;
+    transition: 500ms;
+    left: -175px;
+}
+.back:hover {
+    left: 0;
+    background-color: rgba(0, 0, 0, .7);
+}
+.back a {
+    color: white;
+    font-weight: 600;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 35px;
+    height: 100%;
+    align-items: center;
+    text-decoration: none;
+}
+.back img {
+    width: 30px;
+}
 
+
+.footer {
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    bottom: 0;
+}
 .footer1,
 .footer2 {
     text-align: center;
@@ -87,4 +137,16 @@ body {
 }
 .text--footer:hover {
     text-decoration: underline;
+}
+
+@media screen and (max-width: 780px) {
+    .header {
+    grid-template-columns: 40px 1fr 100px 100px; 
+    }
+    .nameApp {
+        display: none;
+    }
+    .header input {
+        width: 80%;
+    }
 }

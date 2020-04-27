@@ -90,6 +90,56 @@ p {
 	padding: 0 25px;
 }
 
+.back {
+    background-color: rgba(0, 0, 0, .4);
+    position: fixed;
+    bottom: 15%;
+    width: 210px;
+    height: 45px;
+    padding: 0 10px;
+    transition: 500ms;
+    left: -175px;
+}
+.back:hover {
+    left: 0;
+    background-color: rgba(0, 0, 0, .7);
+}
+.back a {
+    color: white;
+    font-weight: 600;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 35px;
+    height: 100%;
+    align-items: center;
+    text-decoration: none;
+}
+.back img {
+    width: 30px;
+}
+
+
+.footer {
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    bottom: 0;
+}
+.footer1,
+.footer2 {
+    text-align: center;
+    margin-top: 15px;;
+}
+.text--footer {
+    font-size: 12px;
+    text-decoration: none;
+    margin-right: 16px;
+    color: #0431B4;
+}
+.text--footer:hover {
+    text-decoration: underline;
+}
+
 @media screen and (max-width: 768px) {
 	.heroContainer {
 			grid-template-columns: 70px 1fr;

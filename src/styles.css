@@ -3,46 +3,83 @@ body {
 	font-family: arial;
 }
 .container {
+	margin: 50px;
 	display: grid;
-	grid-gap: 15px;
+	grid-gap: 20px;
 	grid-template-columns: repeat(3, 1fr);
 }
-.card {
-	background-color: white;
-	border: 2px solid lightgreen;
-	padding: 10px;
-	display: grid;
-	grid-template-areas: "badge title"
-						 "description description"
-						 "link link";
-	justify-items: center;
+/*------------------------------------------------------------ card */
+.container__card {
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 5px 5px 15px #000;
+}
+/*----------------------------------- card__header */
+.card__header {
+	display: flex;
 	align-items: center;
 }
-.logo {
-	grid-area: badge;
-	width: 50px;
+.card__header-logo {
+	width: 4em;
+	margin: 0 10px;
 }
-.title {
-	grid-area: title;
+.card__header-info h2 {
+	margin-bottom: 0;
 }
-.description {
-	grid-area: description;
+.card__header-info p {
+	margin-top: 5px;
 }
-.link {
-	margin-top: 50px;
-	grid-area: link;
+/*----------------------------------- card__body */
+.card__body-img {
+	width: 100%;
 }
-
-
+.card__body p {
+	margin: 10px;
+	font-size: 1em;
+}
+/*----------------------------------- card__footer */
+.card__footer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	margin: 30px 10px 20px;
+}
+.card__footer-buttons a {
+	padding: 10px 10px;
+	text-decoration: none;
+	border-radius: 10px;
+}
+.card__footer-buttons a:hover {
+	box-shadow: 1px 1px 5px #000;
+}
+.btn-cancel {
+	border: 2px solid #FF0000;
+	color: #FF0000;
+}
+.btn-primary {
+	border: 2px solid #01DF3A;
+	background-color: #01DF3A;
+	color: #fff;
+	margin-left: 10px;
+}
+.card__footer img {
+	width: 25px;
+}
+.card__footer img:hover {
+	cursor: pointer;
+}
+/*------------------------------------------------------------ footer */
 .footer {
-    position: fixed;
     width: 100%;
-    bottom: 0;
+	bottom: 0;
+	position: fixed;
+	background-color: #f2f2f2;
 }
-.footer1,
 .footer2 {
     text-align: center;
-    margin-top: 15px;;
+	margin-top: 10px;
+	margin-bottom: 5px;
 }
 .text--footer {
     font-size: 12px;
@@ -53,11 +90,17 @@ body {
 .text--footer:hover {
     text-decoration: underline;
 }
-
-@media screen and (max-width: 500px) {
+/*------------------------------------------------------------ responsive */
+@media screen and (max-width: 900px) {
 	.container {
-	display: grid;
-	grid-gap: 15px;
+	grid-template-columns: 1fr 1fr;
+	}
+	.container__card {
+		margin-bottom: 20px;
+	}
+}
+@media screen and (max-width: 700px) {
+	.container {
 	grid-template-columns: 1fr;
 	}
 }

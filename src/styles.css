@@ -43,7 +43,7 @@ body {
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
-	margin: 30px 10px 20px;
+	margin: 40px 10px 20px;
 }
 .card__footer-buttons a {
 	padding: 10px 10px;
@@ -93,7 +93,7 @@ body {
 /*------------------------------------------------------------ responsive */
 @media screen and (max-width: 900px) {
 	.container {
-	grid-template-columns: 1fr 1fr;
+		grid-template-columns: 1fr 1fr;
 	}
 	.container__card {
 		margin-bottom: 20px;
@@ -101,6 +101,10 @@ body {
 }
 @media screen and (max-width: 700px) {
 	.container {
-	grid-template-columns: 1fr;
+		margin: 50px 20px;
+		grid-template-columns: minmax(264px, 1fr)
+	}
+	.card__footer {
+		margin-top: 50px;
 	}
 }
